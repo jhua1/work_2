@@ -18,7 +18,8 @@ int main() {
   
   clear_screen(s);
 
-
+  draw_line(5,5,400,288,s,c);
+  
   display(s);
   save_extension(s, "lines.png");
 }  
