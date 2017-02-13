@@ -22,5 +22,76 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
     x++;
     d+=2*A;
   }
+
+}
+void octant1(int x0, int y0, int x1, int y1, screen s, color c) {
+  int A,B,x,y,d;
+  x = x0;
+  y = y0;
+  A = y1 - y0;
+  B = x0 - x1;
+  d = B + 2*A;
+  while( x <= x1){
+    plot(s,c,x,y);
+    if ( d > 0){
+      y++;
+      d+=2*B;
+    }
+    x++;
+    d+=2*A;
+  }
 }
 
+void octant2(int x0, int y0, int x1, int y1, screen s, color c) {
+  int A,B,x,y,d;
+  x = x0;
+  y = y0;
+  A = y1 - y0;
+  B = x0 - x1;
+  d = 2*B + A;
+  while( y <= y1){
+    plot(s,c,x,y);
+    if ( d < 0){
+      x++;
+      d+=2*A;
+    }
+    y++;
+    d+=2*B;
+  }
+}
+
+void octant8(int x0, int y0, int x1, int y1, screen s, color c) {
+  int A,B,x,y,d;
+  x = x0;
+  y = y0;
+  A = y1 - y0;
+  B = x0 - x1;
+  d = B - 2*A;
+  while( x <= x1){
+    plot(s,c,x,y);
+    if ( d < 0){
+      y--;
+      d-=2*B;
+    }
+    x++;
+    d+=2*A;
+  }
+}
+
+void octant7(int x0, int y0, int x1, int y1, screen s, color c) {
+  int A,B,x,y,d;
+  x = x0;
+  y = y0;
+  A = y1 - y0;
+  B = x0 - x1;
+  d = 2*B - A;
+  while( y <= y1){
+    plot(s,c,x,y);
+    if ( d > 0){
+      x++;
+      d+=2*A;
+    }
+    y--;
+    d-=2*B;
+  }
+}
