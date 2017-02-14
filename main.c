@@ -17,12 +17,12 @@ int main() {
   c.blue = 0;
   
   clear_screen(s);
-  /*
-  draw_line(67,111,479,310,s,c);
-  draw_line(21,54,342,223,s,c);
-  draw_line(95,147,431,264,s,c);
-  */
-  octant7(250,250,300,0,s,c);
+
+  octant1(0,0,300,250,s,c);
+  octant2(0,0,100,400,s,c);
+  octant7(250,250,300,100,s,c);
+  octant8(250,250,500,200,s,c);
+
   display(s);
   save_extension(s, "lines.png");
 }  
