@@ -82,6 +82,9 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
   int deltx,delty;
   deltx = x1-x0;
   delty = y1-y0;
+  //vertical and horizontal lines
   if (deltx==0 || delty==0){
-    
+    if ( !deltx){
+      if (delty > 0)
+	
 }
