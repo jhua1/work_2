@@ -5,11 +5,6 @@
 #include "display.h"
 #include "draw.h"
 
-//Insert your line algorithm here
-void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
-  
-}
-
 void octant1(int x0, int y0, int x1, int y1, screen s, color c) {
   int A,B,x,y,d;
   x = x0;
@@ -82,4 +77,11 @@ void octant8(int x0, int y0, int x1, int y1, screen s, color c) {
   }
 }
 
-
+//Insert your line algorithm here
+void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
+  int deltx,delty;
+  deltx = x1-x0;
+  delty = y1-y0;
+  if (deltx==0 || delty==0){
+    
+}

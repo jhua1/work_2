@@ -18,10 +18,31 @@ int main() {
   
   clear_screen(s);
 
-  octant1(0,0,300,250,s,c);
-  octant2(0,0,100,400,s,c);
-  octant7(250,250,300,100,s,c);
-  octant8(250,250,500,200,s,c);
+  //testing octants
+  //octant1(0,0,300,250,s,c);
+  //octant2(0,0,100,400,s,c);
+  //octant7(250,250,300,100,s,c);
+  //octant8(250,250,500,200,s,c);
+  
+  //testing slopes 1 and -1
+  //octant1(0,0,500,500,s,c); only 1
+  //octant2(0,0,500,500,s,c); only 1
+  //octant7(0,500,500,0,s,c); only -1
+  //octant8(0,500,500,0,s,c); only -1
+  
+  //testing slopes horizontal
+  //octant1(250,250,0,250,s,c); works going right
+  //octant2(250,250,0,250,s,c); no work
+  //octant7(250,250,0,250,s,c); no work
+  //octant8(0,250,500,250,s,c); works going right
+
+  //testing slopes vertical
+  //octant1(100,500,100,250,s,c); no work
+  //octant2(100,250,100,500,s,c); works going up
+  //octant7(100,500,100,250,s,c); works going down
+  //octant8(100,500,100,250,s,c); no work
+
+  
 
   display(s);
   save_extension(s, "lines.png");
