@@ -42,8 +42,25 @@ int main() {
   //octant7(100,500,100,250,s,c); works going down
   //octant8(100,500,100,250,s,c); no work
 
+  draw_line(250,250,125,250,s,c); //drawing left
+  draw_line(250,250,375,250,s,c); //drawing right
+  draw_line(250,250,250,375,s,c); //drawing up
+  draw_line(250,250,250,125,s,c); //drawing down
+  draw_line(125,250,250,375,s,c); //drawing left to top
+  draw_line(250,375,375,250,s,c); //drawing top to right
+  draw_line(375,250,250,125,s,c); //drawing right to bottom
+  draw_line(250,125,125,250,s,c); //drawing bottom to left
+  draw_line(0,0,250,500,s,c);
+  draw_line(250,500,500,0,s,c);
+  draw_line(500,0,375,125,s,c);
+  draw_line(375,125,125,125,s,c);
+  draw_line(125,125,0,0,s,c);
+  draw_line(0,500,250,0,s,c);
+  draw_line(250,0,500,500,s,c);
+  draw_line(500,500,375,375,s,c);
+  draw_line(375,375,125,375,s,c);
+  draw_line(125,375,0,500,s,c);
   
-
   display(s);
   save_extension(s, "lines.png");
 }  

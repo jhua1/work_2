@@ -16,3 +16,6 @@ display.o: display.c display.h ml6.h
 
 clean:
 	rm *.o *~
+
+run: all
+	./main

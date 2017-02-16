@@ -116,4 +116,22 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
 	octant8(x0,y0,x1,y1,s,c);
     }
   }
+  //Octant 3,4,5,6
+  else if (deltx < 0){
+    deltx *= -1;
+    if ( delty > 0){
+      if ( delty > deltx)
+	octant7(x1,y1,x0,y0,s,c);
+      else
+	octant8(x1,y1,x0,y0,s,c);
+    }
+    else{
+      delty *=-1;
+      if (delty > deltx)
+	octant2(x1,y1,x0,y0,s,c);
+      else
+	octant1(x1,y1,x0,y0,s,c);
+    }
+  }
+  
 }
